@@ -1,7 +1,7 @@
 {
   "name": "changesets-changelog-github-local",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@10.15.1",
   "description": "A local-only version of '@changesets/changelog-github' that doesn't rely on GitHub's API.",
   "author": "LekoArts",
@@ -32,7 +32,6 @@
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && npm publish",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
@@ -41,10 +40,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.2",
-    "@changesets/parse": "^0.4.1",
     "@changesets/types": "^6.1.0",
     "@types/node": "^22.15.17",
-    "bumpp": "^10.1.0",
     "eslint": "^9.34.0",
     "eslint-plugin-format": "^1.0.1",
     "tsdown": "^0.11.9",
