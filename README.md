@@ -81,3 +81,8 @@ Replace `"owner/repo"` with your GitHub repository identifier (for example, `"Le
 ## License
 
 MIT
+
+## Acknowledgements
+
+- [`changelog-github`](https://github.com/changesets/changesets/tree/main/packages/changelog-github)
+- [`changelog-github-compact`](https://github.com/svitejs/changesets-changelog-github-compact)
