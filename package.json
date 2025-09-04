@@ -42,9 +42,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "changeset": "changeset",
-    "version": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "changeset": "changeset"
   },
   "dependencies": {
     "@napi-rs/simple-git": "^0.1.22"
