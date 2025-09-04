@@ -2,4 +2,4 @@
 "changesets-changelog-github-local": major
 ---
 
-todo
+Release v1.0.0
