@@ -31,6 +31,10 @@ Add the changelog generator to your `.changeset/config.json` file:
 
 Replace `"owner/repo"` with your GitHub repository identifier (for example, `"LekoArts/changesets-changelog-github-local"`).
 
+> [!IMPORTANT]
+> **Best practice:** Use [squash merging](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#squash-and-merge-your-commits) for your pull requests. This ensures PR numbers are consistently included in commit messages, which helps this changelog generator create better links to your pull requests.
+> Alternatively you need to make sure that PR numbers (in the format `(#123)`) are at the end of the first line of your commit message.
+
 ### Features
 
 - Links to commits and pull requests in your changelogs
