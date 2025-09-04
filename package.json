@@ -14,6 +14,13 @@
   "bugs": {
     "url": "https://github.com/LekoArts/changesets-changelog-github-local/issues"
   },
+  "keywords": [
+    "changesets",
+    "changelog",
+    "github",
+    "local",
+    "git"
+  ],
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
@@ -28,18 +35,24 @@
     "access": "public"
   },
   "scripts": {
+    "prepublishOnly": "pnpm build",
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "version:ci": "changeset version && pnpm install --lockfile-only",
+    "release": "pnpm build && changeset publish"
   },
   "dependencies": {
     "@napi-rs/simple-git": "^0.1.22"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.2",
+    "@changesets/cli": "^2.29.6",
     "@changesets/types": "^6.1.0",
     "@types/node": "^22.15.17",
     "eslint": "^9.34.0",
