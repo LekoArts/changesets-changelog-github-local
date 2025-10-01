@@ -1,122 +1,118 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":disablePeerDependencies",
-    ":ignoreModulesAndTests",
-    ":separateMajorReleases",
-    ":combinePatchMinorReleases",
-    ":ignoreModulesAndTests",
-    ":enableVulnerabilityAlerts"
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    ':disablePeerDependencies',
+    ':ignoreModulesAndTests',
+    ':separateMajorReleases',
+    ':combinePatchMinorReleases',
+    ':ignoreModulesAndTests',
+    ':enableVulnerabilityAlerts',
   ],
-  "dependencyDashboard": true,
-  "labels": [
-    "renovate"
+  dependencyDashboard: true,
+  labels: [
+    'renovate',
   ],
-  "prHourlyLimit": 4,
-  "prConcurrentLimit": 16,
-  "rangeStrategy": "bump",
-  "semanticCommits": "enabled",
-  "timezone": "GMT",
-  "schedule": [
-    "before 10am on the first day of the month"
+  prHourlyLimit: 4,
+  prConcurrentLimit: 16,
+  rangeStrategy: 'bump',
+  semanticCommits: 'enabled',
+  timezone: 'GMT',
+  schedule: [
+    'before 10am on the first day of the month',
   ],
-  "automerge": false,
-  "postUpdateOptions": [
-    "pnpmDedupe"
+  automerge: false,
+  postUpdateOptions: [
+    'pnpmDedupe',
   ],
-  "updateNotScheduled": false,
-  "ignorePaths": [
-    "**/node_modules/**"
+  updateNotScheduled: false,
+  ignorePaths: [
+    '**/node_modules/**',
   ],
-  "nvm": {
-    "enabled": false
+  nvm: {
+    enabled: false,
   },
-  "packageRules": [
+  packageRules: [
     {
-      "matchDepTypes": [
-        "engines",
-        "@types/node"
+      matchDepTypes: [
+        'engines',
+        '@types/node',
       ],
-      "enabled": false
+      enabled: false,
     },
     {
-      "groupName": "Dependencies",
-      "commitMessageTopic": "Dependencies",
-      "groupSlug": "dependencies",
-      "matchFileNames": [
-        "package.json"
+      groupName: 'Dependencies',
+      commitMessageTopic: 'Dependencies',
+      groupSlug: 'dependencies',
+      matchFileNames: [
+        'package.json',
       ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
+      matchUpdateTypes: [
+        'patch',
+        'minor',
       ],
-      "matchDepTypes": [
-        "dependencies",
-        "devDependencies"
+      matchDepTypes: [
+        'dependencies',
+        'devDependencies',
       ],
-      "automerge": true
+      automerge: true,
     },
     {
-      "groupName": "Dependencies (Major)",
-      "commitMessageTopic": "Dependencies (Major)",
-      "groupSlug": "dependencies-major",
-      "matchFileNames": [
-        "package.json"
+      groupName: 'Dependencies (Major)',
+      commitMessageTopic: 'Dependencies (Major)',
+      groupSlug: 'dependencies-major',
+      matchFileNames: [
+        'package.json',
       ],
-      "matchUpdateTypes": [
-        "major"
+      matchUpdateTypes: [
+        'major',
       ],
-      "matchDepTypes": [
-        "dependencies",
-        "devDependencies"
-      ]
+      matchDepTypes: [
+        'dependencies',
+        'devDependencies',
+      ],
     },
     {
-      "groupName": "Linting",
-      "commitMessageTopic": "Linting",
-      "matchFileNames": [
-        "package.json"
+      groupName: 'Linting',
+      commitMessageTopic: 'Linting',
+      matchFileNames: [
+        'package.json',
       ],
-      "matchPackageNames": [
-        "eslint",
-        "@antfu/eslint-config"
+      matchPackageNames: [
+        'eslint',
+        '@antfu/eslint-config',
+        '/^eslint-/',
       ],
-      "matchPackagePatterns": [
-        "^eslint-"
+      matchUpdateTypes: [
+        'major',
+        'minor',
+        'patch',
       ],
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
+      matchDepTypes: [
+        'dependencies',
+        'devDependencies',
       ],
-      "matchDepTypes": [
-        "dependencies",
-        "devDependencies"
-      ],
-      "automerge": true
+      automerge: true,
     },
     {
-      "groupName": "TypeScript",
-      "matchFileNames": [
-        "package.json"
+      groupName: 'TypeScript',
+      matchFileNames: [
+        'package.json',
       ],
-      "matchPackageNames": [
-        "typescript",
-        "@changesets/types"
+      matchPackageNames: [
+        'typescript',
+        '@changesets/types',
+        '/^@types/',
       ],
-      "matchPackagePatterns": [
-        "^@types"
+      matchUpdateTypes: [
+        'major',
+        'minor',
+        'patch',
       ],
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
+      matchDepTypes: [
+        'devDependencies',
       ],
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "automerge": true
-    }
-  ]
+      automerge: true,
+    },
+  ],
 }
