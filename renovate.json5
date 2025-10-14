@@ -80,10 +80,8 @@
       ],
       "matchPackageNames": [
         "eslint",
-        "@antfu/eslint-config"
-      ],
-      "matchPackagePatterns": [
-        "^eslint-"
+        "@antfu/eslint-config",
+        "/^eslint-/"
       ],
       "matchUpdateTypes": [
         "major",
@@ -103,10 +101,8 @@
       ],
       "matchPackageNames": [
         "typescript",
-        "@changesets/types"
-      ],
-      "matchPackagePatterns": [
-        "^@types"
+        "@changesets/types",
+        "/^@types/"
       ],
       "matchUpdateTypes": [
         "major",
