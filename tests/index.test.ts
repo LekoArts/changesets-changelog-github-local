@@ -77,6 +77,55 @@ describe('changelogFunctions', () => {
       expect(result).toContain('  - pkg-2@2.0.0')
     })
 
+    it('formats one dependency update correctly', async () => {
+      const changesets: NewChangesetWithCommit[] = [
+        {
+          id: 'changeset-1',
+          commit: 'abc1234567890',
+          summary: 'A summary',
+          releases: [{ name: 'pkg-1', type: 'minor' }],
+        },
+      ]
+
+      const dependenciesUpdated: ModCompWithPackage[] = [
+        {
+          name: 'pkg-1',
+          newVersion: '1.0.0',
+          oldVersion: '0.9.0',
+          type: 'minor',
+          changesets: ['changeset-1'],
+          packageJson: { name: 'pkg-1', version: '1.0.0' },
+          dir: 'packages/pkg-1',
+        },
+      ]
+
+      const result = await changelogFunctions.getDependencyReleaseLine(changesets, dependenciesUpdated, validOptions)
+
+      expect(result).toContain('- Updated dependencies [[`abc1234`](https://github.com/owner/repo/commit/abc1234567890)]:')
+      expect(result).toContain('  - pkg-1@1.0.0')
+    })
+
+    it('handles updates without changesets', async () => {
+      const changesets: NewChangesetWithCommit[] = []
+
+      const dependenciesUpdated: ModCompWithPackage[] = [
+        {
+          name: 'pkg-1',
+          newVersion: '1.0.0',
+          oldVersion: '0.9.0',
+          type: 'minor',
+          changesets: ['changeset-1'],
+          packageJson: { name: 'pkg-1', version: '1.0.0' },
+          dir: 'packages/pkg-1',
+        },
+      ]
+
+      const result = await changelogFunctions.getDependencyReleaseLine(changesets, dependenciesUpdated, validOptions)
+
+      expect(result).toContain('- Updated dependencies:')
+      expect(result).toContain('  - pkg-1@1.0.0')
+    })
+
     it('handles changesets without commits', async () => {
       const changesets: NewChangesetWithCommit[] = [
         {
