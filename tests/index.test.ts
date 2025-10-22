@@ -122,7 +122,7 @@ describe('changelogFunctions', () => {
 
       const result = await changelogFunctions.getDependencyReleaseLine(changesets, dependenciesUpdated, validOptions)
 
-      expect(result).toContain('- Updated dependencies []:')
+      expect(result).toContain('- Updated dependencies:')
       expect(result).toContain('  - pkg-1@1.0.0')
     })
 

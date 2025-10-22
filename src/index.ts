@@ -16,15 +16,17 @@ const changelogFunctions: ChangelogFunctions = {
     /**
      * Link out all the commit SHAs where dependencies were updated
      */
-    const changesetLink = `- Updated dependencies [${
-      changesets.map((c) => {
-        if (c.commit) {
-          return `[\`${getShortSha(c.commit)}\`](${getCommitUrl(options, c.commit)})`
-        }
+    const changesetLink = `- Updated dependencies${changesets.length > 0
+      ? ` [${
+        changesets.map((c) => {
+          if (c.commit) {
+            return `[\`${getShortSha(c.commit)}\`](${getCommitUrl(options, c.commit)})`
+          }
 
-        return null
-      }).filter(Boolean).join(', ')
-    }]:`
+          return null
+        }).filter(Boolean).join(', ')
+      }]:`
+      : ':'}`
 
     /**
      * List out all the updated dependencies
