@@ -2,6 +2,8 @@
 
 A changelog generator for [changesets](https://github.com/changesets/changesets) that adds GitHub repository links to commits and pull requests, improving the readability of your changelogs. This package works without network requests to the GitHub API (instead it uses `git`).
 
+![NPM Version](https://img.shields.io/npm/v/changesets-changelog-github-local) ![NPM Downloads](https://img.shields.io/npm/dm/changesets-changelog-github-local)
+
 ## Installation
 
 ```bash
