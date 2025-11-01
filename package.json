@@ -52,7 +52,7 @@
     "@antfu/eslint-config": "^5.4.1",
     "@changesets/cli": "^2.29.7",
     "@changesets/types": "^6.1.0",
-    "@types/node": "^22.18.12",
+    "@types/node": "^22.18.13",
     "eslint": "^9.38.0",
     "eslint-plugin-format": "^1.0.2",
     "tsdown": "^0.11.9",
