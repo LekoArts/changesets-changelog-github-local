@@ -2,7 +2,7 @@
   "name": "changesets-changelog-github-local",
   "type": "module",
   "version": "1.0.1",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.20.0",
   "description": "A local-only version of '@changesets/changelog-github' that doesn't rely on GitHub's API.",
   "author": "LekoArts",
   "license": "MIT",
