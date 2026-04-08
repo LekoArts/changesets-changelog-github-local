@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install pnpm
-        uses: pnpm/action-setup@v4.2.0
+        uses: pnpm/action-setup@v4.4.0
 
       - name: Set node LTS
         uses: actions/setup-node@v6
