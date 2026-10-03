@@ -2,7 +2,7 @@
   "name": "changesets-changelog-github-local",
   "type": "module",
   "version": "1.0.1",
-  "packageManager": "pnpm@11.5.0",
+  "packageManager": "pnpm@11.25.0",
   "description": "A local-only version of '@changesets/changelog-github' that doesn't rely on GitHub's API.",
   "author": "LekoArts",
   "license": "MIT",
@@ -47,19 +47,20 @@
     "check": "publint && attw --pack . --profile esm-only"
   },
   "dependencies": {
-    "@napi-rs/simple-git": "^0.1.22"
+    "@napi-rs/simple-git": "^1.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
     "@arethetypeswrong/cli": "^0.18.5",
-    "@changesets/cli": "^2.31.1",
-    "@changesets/types": "^6.1.0",
+    "@changesets/cli": "^3.0.1",
+    "@changesets/types": "^7.0.0",
     "@types/node": "^24.13.3",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.9.1",
     "eslint-plugin-format": "^2.0.1",
     "publint": "^0.3.24",
     "tsdown": "^0.22.14",
-    "typescript": "^6.0.3",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vitest": "^4.1.11"
   }
 }
