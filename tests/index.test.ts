@@ -77,6 +77,23 @@ describe('changelogFunctions', () => {
       expect(result).toContain('  - pkg-2@2.0.0')
     })
 
+    it('formats unversioned private dependencies without an undefined version', async () => {
+      const dependenciesUpdated: ModCompWithPackage[] = [
+        {
+          name: 'private-package',
+          newVersion: undefined,
+          oldVersion: undefined,
+          type: 'none',
+          changesets: [],
+          packageJson: { name: 'private-package', private: true },
+          dir: 'packages/private-package',
+        },
+      ]
+
+      const result = await changelogFunctions.getDependencyReleaseLine([], dependenciesUpdated, validOptions)
+      expect(result).toBe('- Updated dependencies:\n  - private-package')
+    })
+
     it('formats one dependency update correctly', async () => {
       const changesets: NewChangesetWithCommit[] = [
         {

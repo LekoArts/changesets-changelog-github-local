@@ -31,7 +31,7 @@ const changelogFunctions: ChangelogFunctions = {
     /**
      * List out all the updated dependencies
      */
-    const updatedDependenciesList = dependenciesUpdated.map(d => `  - ${d.name}@${d.newVersion}`)
+    const updatedDependenciesList = dependenciesUpdated.map(d => `  - ${d.name}${d.newVersion === undefined ? '' : `@${d.newVersion}`}`)
 
     return [changesetLink, ...updatedDependenciesList].join('\n')
   },

@@ -62,6 +62,8 @@ Replace `"owner/repo"` with your GitHub repository identifier (for example, `"Le
 
 ## Development
 
+Use Node.js 24 and pnpm 11.25.0 (as pinned in `package.json`). Type checking runs TypeScript 7 through the `@typescript/native` alias; the `typescript` alias provides the TypeScript 6 API required by ESLint and declaration generation.
+
 - Install dependencies:
 
   ```bash
