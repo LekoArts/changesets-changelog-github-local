@@ -50,13 +50,13 @@
     "@napi-rs/simple-git": "^1.2.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.3.0",
+    "@antfu/eslint-config": "^9.5.1",
     "@arethetypeswrong/cli": "^0.18.5",
     "@changesets/cli": "^3.0.3",
     "@changesets/types": "^7.0.0",
     "@types/node": "^24.19.2",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "eslint": "^10.9.1",
+    "eslint": "^10.14.0",
     "eslint-plugin-format": "^2.0.1",
     "publint": "^0.3.25",
     "tsdown": "^0.23.4",
